@@ -6,13 +6,7 @@ import EpisodeDetails from "../episodes/EpisodeDetails";
 /** Allows users to browse through the episodes of the given show */
 export default function ShowDetails({ show }) {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
-  if (!show) {
-    return (
-      <section className="details">
-        <p>Select a show to see more.</p>
-      </section>
-    );
-  }
+  if (!show) return <p>Plesae select a show to learn more</p>;
   return (
     <div className="show-details">
       <EpisodeList
